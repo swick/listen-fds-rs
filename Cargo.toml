@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2026 The listen-fds-rs authors
+# SPDX-License-Identifier: MIT OR Apache-2.0
+
+[package]
+name = "listen-fds"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+authors = ["The listen-fds-rs authors"]
+license = "MIT OR Apache-2.0"
+description = "A Rust library for handling systemd socket activation"
+repository = "https://github.com/swick/listen-fds-rs"
+homepage = "https://github.com/swick/listen-fds-rs"
+documentation = "https://docs.rs/listen-fds"
+readme = "README.md"
+keywords = ["systemd", "socket-activation", "linux", "fd", "socket"]
+categories = ["os::unix-apis"]
+
+[dependencies]
+libc = "0.2"
+pidfd-util = { version = "0.1", git = "https://github.com/swick/pidfd-util-rs.git" }
+thiserror = "2"

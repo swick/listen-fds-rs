@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 The listen-fds-rs authors
+# SPDX-License-Identifier: MIT OR Apache-2.0
+
+[package]
+name = "listen-fds"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+libc = "0.2"
+pidfd-util = { version = "0.1.0", git = "https://github.com/swick/pidfd-util-rs.git" }
+thiserror = "2.0.18"

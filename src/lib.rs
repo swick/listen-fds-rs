@@ -127,4 +127,11 @@ impl ListenFds {
             (*s == name).then(|| fd.take()).flatten()
         })
     }
+
+    pub fn take_single(&mut self, name: &str) -> Option<OwnedFd> {
+        let mut named = self.names.iter().flatten().zip(&mut self.fds).filter(|(s, _)| *s == name);
+        let (_, fd) = named.next()?;
+        if named.next().is_some() { return None; }
+        fd.take()
+    }
 }
